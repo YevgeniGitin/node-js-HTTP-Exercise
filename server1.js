@@ -5,7 +5,7 @@ module.exports = function init() {
     http.Server((req, res) => {
         sleep(2000);
         res.writeHead(200);
-        console.log("in server");
+        console.log("server request" + req.url);
         res.end('done\n');
     }).listen(8001);
 
